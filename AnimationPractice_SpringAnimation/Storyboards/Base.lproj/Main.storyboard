@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="AnimationPractice_SpringAnimation" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rUL-7K-IiE">
+                                <rect key="frame" x="87" y="109" width="219" height="128"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Core Animation View" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rTK-RU-JHe">
+                                        <rect key="frame" x="30" y="53.666666666666657" width="159" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" systemColor="linkColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.70980392156862748" green="0.76470588235294112" blue="0.98431372549019602" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="PPD-OS-ZQy"/>
+                                    <constraint firstItem="rTK-RU-JHe" firstAttribute="centerX" secondItem="rUL-7K-IiE" secondAttribute="centerX" id="Q9y-5m-yKA"/>
+                                    <constraint firstItem="rTK-RU-JHe" firstAttribute="centerY" secondItem="rUL-7K-IiE" secondAttribute="centerY" id="w0T-PF-S6U"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <integer key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yfL-J0-1Kv">
+                                <rect key="frame" x="87" y="595.33333333333337" width="219" height="34"/>
+                                <color key="backgroundColor" red="0.71162711121009103" green="0.76575417003558488" blue="0.98493069410324097" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Start Core Animation"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <integer key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="runCoreAnimation:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lNr-kr-YGC"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rpX-gH-mr7" customClass="SpringButton" customModule="SpringAnimation">
+                                <rect key="frame" x="87" y="661.33333333333337" width="219" height="34"/>
+                                <color key="backgroundColor" red="0.80392156862745101" green="0.65490196078431373" blue="0.47450980392156861" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Start Core Animation"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <integer key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="autostart" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="force">
+                                        <real key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="animation" value="pop"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="delay">
+                                        <real key="value" value="3"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="runCoreAnimation:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1x3-4A-8Pv"/>
+                                    <action selector="runSpringAnimation:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9LO-et-Vhz"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XwL-tJ-aWS" customClass="SpringView" customModule="SpringAnimation">
+                                <rect key="frame" x="87" y="287" width="219" height="128"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Core Animation View" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NYX-GN-IQo">
+                                        <rect key="frame" x="30" y="53.666666666666686" width="159" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" systemColor="linkColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.80392156862745101" green="0.65490196078431373" blue="0.47450980392156861" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="NYX-GN-IQo" firstAttribute="centerY" secondItem="XwL-tJ-aWS" secondAttribute="centerY" id="AwT-1c-g8n"/>
+                                    <constraint firstItem="NYX-GN-IQo" firstAttribute="centerX" secondItem="XwL-tJ-aWS" secondAttribute="centerX" id="e81-HQ-zS5"/>
+                                    <constraint firstAttribute="height" constant="128" id="omw-Np-yoL"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <integer key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="autostart" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="force">
+                                        <real key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="animation" value="pop"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="curve" value="spring"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="delay">
+                                        <real key="value" value="3"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="yfL-J0-1Kv" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="1vE-xB-L0l"/>
+                            <constraint firstItem="XwL-tJ-aWS" firstAttribute="top" secondItem="rUL-7K-IiE" secondAttribute="bottom" constant="50" id="1w7-YW-6VJ"/>
+                            <constraint firstItem="rpX-gH-mr7" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="3R4-eP-SAa"/>
+                            <constraint firstItem="yfL-J0-1Kv" firstAttribute="width" secondItem="rUL-7K-IiE" secondAttribute="width" id="PNw-0z-HpS">
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <integer key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </constraint>
+                            <constraint firstItem="rUL-7K-IiE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="87" id="TFY-PH-Svv"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="yfL-J0-1Kv" secondAttribute="bottom" multiplier="1.3" id="Ydk-UI-pPB"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="rUL-7K-IiE" secondAttribute="trailing" constant="87" id="Zha-n3-5Gq"/>
+                            <constraint firstItem="XwL-tJ-aWS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="87" id="gUu-0W-0dF"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="XwL-tJ-aWS" secondAttribute="trailing" constant="87" id="mFW-Dc-gWx"/>
+                            <constraint firstItem="rpX-gH-mr7" firstAttribute="top" secondItem="yfL-J0-1Kv" secondAttribute="bottom" constant="32" id="nJj-nH-kKD"/>
+                            <constraint firstItem="rpX-gH-mr7" firstAttribute="width" secondItem="XwL-tJ-aWS" secondAttribute="width" id="pdk-2R-EbK"/>
+                            <constraint firstItem="rUL-7K-IiE" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="s0l-HR-Stq"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="coreAnimationView" destination="rUL-7K-IiE" id="ehZ-by-cXS"/>
+                        <outlet property="springAnimationView" destination="XwL-tJ-aWS" id="DI0-Sy-Bbv"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="139.69465648854961" y="3.5211267605633805"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="linkColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
